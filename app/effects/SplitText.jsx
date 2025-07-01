@@ -113,10 +113,6 @@ const SplitText = ({
       className={`split-parent ${className}`}
       style={{
         textAlign,
-        overflow: "hidden",
-        display: "inline-block",
-        whiteSpace: "normal",
-        wordWrap: "break-word",
       }}
     >
       {text}

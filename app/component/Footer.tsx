@@ -6,12 +6,10 @@ export function Footer(){
 
     return(
         
-        <footer className="text-white text-center p-3">
+        <footer className="text-white font-medium text-center p-5">
 
-            <div className="font-sans font-medium">
-                <p>© {currentYear} REDPM</p>
-                <p>rhabidpmendoza@gmail.com</p>
-            </div>
+            <p>© {currentYear} <span className="text-red-400">REDPM</span></p>
+            <p>rhabidpmendoza@gmail.com</p>
 
         </footer>
 

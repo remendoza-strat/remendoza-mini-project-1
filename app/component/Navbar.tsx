@@ -3,10 +3,12 @@ import Link from 'next/link';
 import Image from 'next/image'; 
 import {useState} from 'react';
 import {jua} from '../layout';
+import {usePathname} from "next/navigation";
 
 export function Navbar(){
 
     const [menuOpen,setMenuOpen] = useState(false);
+    const pathname = usePathname();
 
     return(
 
@@ -30,12 +32,42 @@ export function Navbar(){
                 </button>
 
                 <div className={'w-full md:block md:w-auto ' + (menuOpen ? 'block' : 'hidden')} id="navbar-default">
+                    
                     <ul className={`text-2xl flex flex-col p-4 mt-4 items-center text-center md:p-0 md:flex-row md:space-x-8 md:mt-0 ${jua.className}`}>
-                        <li><Link href="/" className="block pt-2 text-white border-b-2 border-transparent hover:border-pink-600 transition-all duration-200">Home</Link></li>
-                        <li><Link href="/about" className="block pt-2 text-white border-b-2 border-transparent hover:border-pink-600 transition-all duration-200">About</Link></li>
-                        <li><Link href="/projects" className="block pt-2 text-white border-b-2 border-transparent hover:border-pink-600 transition-all duration-200">Projects</Link></li>
-                        <li><Link href="/contact" className="block pt-2 text-white border-b-2 border-transparent hover:border-pink-600 transition-all duration-200">Contact</Link></li>
+                        <li>
+                            <Link
+                                href="/"
+                                className={`block pt-2 border-b-2 border-transparent hover:border-red-400 transition-all duration-200 ${
+                                pathname === "/" ? "text-red-400" : "text-white"}`}>
+                                    Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/about"
+                                className={`block pt-2 border-b-2 border-transparent hover:border-red-400 transition-all duration-200 ${
+                                pathname === "/about" ? "text-red-400" : "text-white"}`}>
+                                    About
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/projects"
+                                className={`block pt-2 border-b-2 border-transparent hover:border-red-400 transition-all duration-200 ${
+                                pathname === "/projects" ? "text-red-400" : "text-white"}`}>
+                                    Projects
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/contact"
+                                className={`block pt-2 border-b-2 border-transparent hover:border-red-400 transition-all duration-200 ${
+                                pathname === "/contact" ? "text-red-400" : "text-white"}`}>
+                                    Contact
+                            </Link>
+                        </li>
                     </ul>
+                    
                 </div>
 
             </div>
