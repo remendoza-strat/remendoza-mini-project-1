@@ -8,7 +8,7 @@ import {usePathname} from 'next/navigation';
 export function Navbar(){
 
     const [menuOpen,setMenuOpen] = useState(false);
-    const pathname = usePathname();
+    const pathName= usePathname();
 
     return(
 
@@ -17,7 +17,7 @@ export function Navbar(){
             <div className="flex flex-wrap items-center justify-between px-8 py-5">
                 
                 <Link href="/" className="flex items-center justify-center">
-                    <Image src="/images/icon.png" alt="logo" width={40} height={40} priority/>
+                    <Image src="/images/icon.png" alt="logo" width={40} height={40}/>
                     <span className={`text-4xl font-bold text-white px-3 ${jua.className}`}>REDPM</span>
                 </Link>
 
@@ -38,7 +38,7 @@ export function Navbar(){
                             <Link
                                 href="/"
                                 className={`block pt-2 border-b-2 border-transparent hover:border-red-400 transition-all duration-200 ${
-                                pathname === "/" ? "text-red-400" : "text-white"}`}>
+                                pathName=== "/" ? "text-red-400" : "text-white"}`}>
                                     Home
                             </Link>
                         </li>
@@ -46,7 +46,7 @@ export function Navbar(){
                             <Link
                                 href="/about"
                                 className={`block pt-2 border-b-2 border-transparent hover:border-red-400 transition-all duration-200 ${
-                                pathname === "/about" ? "text-red-400" : "text-white"}`}>
+                                pathName=== "/about" ? "text-red-400" : "text-white"}`}>
                                     About
                             </Link>
                         </li>
@@ -54,7 +54,7 @@ export function Navbar(){
                             <Link
                                 href="/projects"
                                 className={`block pt-2 border-b-2 border-transparent hover:border-red-400 transition-all duration-200 ${
-                                pathname === "/projects" ? "text-red-400" : "text-white"}`}>
+                                pathName=== "/projects" ? "text-red-400" : "text-white"}`}>
                                     Projects
                             </Link>
                         </li>
@@ -62,7 +62,7 @@ export function Navbar(){
                             <Link
                                 href="/contact"
                                 className={`block pt-2 border-b-2 border-transparent hover:border-red-400 transition-all duration-200 ${
-                                pathname === "/contact" ? "text-red-400" : "text-white"}`}>
+                                pathName=== "/contact" ? "text-red-400" : "text-white"}`}>
                                     Contact
                             </Link>
                         </li>

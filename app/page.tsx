@@ -30,7 +30,7 @@ export default function Index(){
 
                     <div className="text-red-400">
                         <TrueFocus 
-                            sentence="Runner Developer Student"
+                            sentence="Developer Student Learner"
                             manualMode={false}
                             blurAmount={5}
                             borderColor="red"
@@ -38,8 +38,6 @@ export default function Index(){
                             pauseBetweenAnimations={1}
                         />
                     </div>
-
-                    
 
                 </div>
 
