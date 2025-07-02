@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import TrueFocus from './effects/TrueFocus';
+import TrueFocus from '../custom_effects/TrueFocus';
 import {Button} from '@/components/ui/button';
 import {IconDownload, IconBrandGithub, IconBrandLinkedin} from '@tabler/icons-react';
 
