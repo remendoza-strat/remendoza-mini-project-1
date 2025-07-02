@@ -1,8 +1,8 @@
 import './globals.css';
 import './custom.css';
 import {Inter, Jua} from 'next/font/google';
-import {Navbar} from '../custom_components/Navbar';
-import {Footer} from '../custom_components/Footer';
+import Navbar from '../custom_components/Navbar';
+import Footer from '../custom_components/Footer';
 import ClickSpark from '../custom_effects/ClickSpark';
 
 export const inter = Inter({

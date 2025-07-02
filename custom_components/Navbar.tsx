@@ -5,7 +5,7 @@ import {useState} from 'react';
 import {jua} from '../app/layout';
 import {usePathname} from 'next/navigation';
 
-export function Navbar(){
+export default function Navbar(){
 
     const [menuOpen,setMenuOpen] = useState(false);
     const pathName= usePathname();
@@ -32,7 +32,6 @@ export function Navbar(){
                 </button>
 
                 <div className={'w-full md:block md:w-auto ' + (menuOpen ? 'block' : 'hidden')} id="navbar-default">
-                    
                     <ul className={`text-2xl flex flex-col p-4 mt-4 items-center text-center md:p-0 md:flex-row md:space-x-8 md:mt-0 ${jua.className}`}>
                         <li>
                             <Link
@@ -66,8 +65,7 @@ export function Navbar(){
                                     Contact
                             </Link>
                         </li>
-                    </ul>
-                    
+                    </ul> 
                 </div>
 
             </div>
