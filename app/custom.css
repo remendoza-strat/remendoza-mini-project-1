@@ -5,16 +5,3 @@ body{
 nav{
     background-color: rgba(18, 18, 18, 0.8);
 }
-
-@keyframes custom-wiggle {
-  0%, 100% {
-    transform: rotate(-2deg);
-  }
-  50% {
-    transform: rotate(2deg);
-  }
-}
-
-.about-wiggle-effect {
-  animation: custom-wiggle 1.5s ease-in-out infinite;
-}

@@ -1,0 +1,45 @@
+'use client';
+import {useState} from 'react';
+import {inter} from '../../app/layout';
+import Item from './Item';
+
+interface TabContent{
+    image: string;
+    data1: string;
+    data2: string;
+    data3: string;
+}
+
+interface ItemSection{
+    data: Record<string, TabContent[]>;
+}
+
+export default function ItemSection({data} : ItemSection){
+
+  	const [activeTab, setActiveTab] = useState(Object.keys(data)[0]);
+
+	return(
+		<>
+			<div>
+				
+				<div className="flex flex-wrap sm:flex-nowrap gap-4 mb-6 overflow-x-auto">
+					{Object.keys(data).map((tab) => (
+					<button key={tab} onClick={() => setActiveTab(tab)} className={`text-xl ${inter.className} ${
+						activeTab === tab ? 'text-white font-semibold p-1 bg-red-400 rounded-md' : 'text-gray-400'}`}>
+							{tab}
+					</button>
+					))}
+				</div>
+
+				<div className="flex flex-row m-2">
+					{data[activeTab].map((item, index) => (
+					<Item key={index} {...item}/>
+					))}
+				</div>
+
+			</div>
+		</>
+
+	);
+
+}

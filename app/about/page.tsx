@@ -1,52 +1,36 @@
-import Image from 'next/image';
-
+'use client';
+import {useAOSInit} from '@/custom_effects/AOS';
+import Title from '../../custom_components/about/Title';
+import Me from '../../custom_components/about/Me';
+import LanguageSection from '../../custom_components/about/LanguageSection';
+import ItemSection from '../../custom_components/about/ItemSection'
+import {certificates, progress} from '../../custom_components/about/about-data'
 
 export default function About(){
     
+    useAOSInit();
+
     return(
-        
-        <div className="m-3">
-            <div className="flex items-center m-3">
-                <div className="w-30 h-[5px] bg-red-400"></div>
-                <h2 className="text-white text-bold text-5xl">About Me</h2>
-            </div>
-
-            <div className="flex flex-col md:flex-row">
-                
-                <div className="flex-1 flex justify-center items-center">
-                    <Image
-                        src="/images/about.jpg"
-                        alt="rhabi mendoza"
-                        width={300}
-                        height={300}
-                        quality={100}
-                        className="w-80 m-5 rounded-md about-wiggle-effect"
-                    />
+        <>
+            <div className="mx-3">
+                <div className="my-5">
+                    <Title text="About Me"/>
+                    <Me/>
                 </div>
-
-                <div className="flex-1">
-                    <div className="w-[80%] mx-auto">
-                        <p className="text-white text-justify m-5 p-1 leading-[2.5]">
-                            I am a 22-year-old developer based in Bulacan, Philippines. As a fourth-year college student, I am currently immersed in the ever-evolving world of academia, where I balance the pursuit of knowledge with a passion for technology. <br/>
-                            My journey as a developer has led me deep into the complex and rewarding field of web and mobile application development. Over the years, I’ve honed my skills by building real-world projects, exploring modern frameworks, and constantly pushing the boundaries of what I can create. <br/>
-                            With a strong foundation in both front-end and back-end technologies, I strive to craft digital experiences that are not only functional but also intuitive and engaging.
-                        </p>
-                    </div>
+                <div className="my-10">
+                    <Title text="Stack"/>
+                    <LanguageSection/>
                 </div>
-
+                <div className="my-10">
+                    <Title text="Progress"/>
+                    <ItemSection data={progress}/>
+                </div>
+                <div className="my-10">
+                    <Title text="Certificates"/>
+                    <ItemSection data={certificates}/>
+                </div>
             </div>
-
-            
-
-
-
-
-
-        </div>
-        
-
-
-
+        </>
     );
 
 }
