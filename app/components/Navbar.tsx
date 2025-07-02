@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image'; 
 import {useState} from 'react';
 import {jua} from '../layout';
-import {usePathname} from "next/navigation";
+import {usePathname} from 'next/navigation';
 
 export function Navbar(){
 
