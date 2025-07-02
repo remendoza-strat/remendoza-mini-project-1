@@ -1,4 +1,3 @@
-'use client';
 import {useState} from 'react';
 import {inter} from '../../app/layout';
 import Item from './Item';
