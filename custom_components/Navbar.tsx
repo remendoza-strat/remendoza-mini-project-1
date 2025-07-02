@@ -16,7 +16,7 @@ export default function Navbar(){
 
             <div className="flex flex-wrap items-center justify-between px-8 py-5">
                 
-                <Link href="/" className="flex items-center justify-center">
+                <Link onClick={() => setMenuOpen(false)} href="/" className="flex items-center justify-center">
                     <Image src="/images/icon.png" alt="logo" width={40} height={40}/>
                     <span className={`text-4xl font-bold text-white px-3 ${jua.className}`}>REDPM</span>
                 </Link>
@@ -35,6 +35,7 @@ export default function Navbar(){
                     <ul className={`text-2xl flex flex-col p-4 mt-4 items-center text-center md:p-0 md:flex-row md:space-x-8 md:mt-0 ${jua.className}`}>
                         <li>
                             <Link
+                                onClick={() => setMenuOpen(false)}
                                 href="/"
                                 className={`block pt-2 border-b-2 border-transparent hover:border-red-400 transition-all duration-200 ${
                                 pathName=== "/" ? "text-red-400" : "text-white"}`}>
@@ -43,6 +44,7 @@ export default function Navbar(){
                         </li>
                         <li>
                             <Link
+                                onClick={() => setMenuOpen(false)}
                                 href="/about"
                                 className={`block pt-2 border-b-2 border-transparent hover:border-red-400 transition-all duration-200 ${
                                 pathName=== "/about" ? "text-red-400" : "text-white"}`}>
@@ -51,6 +53,7 @@ export default function Navbar(){
                         </li>
                         <li>
                             <Link
+                                onClick={() => setMenuOpen(false)}
                                 href="/projects"
                                 className={`block pt-2 border-b-2 border-transparent hover:border-red-400 transition-all duration-200 ${
                                 pathName=== "/projects" ? "text-red-400" : "text-white"}`}>
@@ -59,6 +62,7 @@ export default function Navbar(){
                         </li>
                         <li>
                             <Link
+                                onClick={() => setMenuOpen(false)}
                                 href="/contact"
                                 className={`block pt-2 border-b-2 border-transparent hover:border-red-400 transition-all duration-200 ${
                                 pathName=== "/contact" ? "text-red-400" : "text-white"}`}>
