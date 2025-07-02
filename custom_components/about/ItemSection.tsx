@@ -31,7 +31,7 @@ export default function ItemSection({data} : ItemSection){
 					))}
 				</div>
 
-				<div className="flex flex-row m-2">
+				<div className="flex flex-wrap gap-4 m-2 justify-center">
 					{data[activeTab].map((item, index) => (
 					<Item key={index} {...item}/>
 					))}

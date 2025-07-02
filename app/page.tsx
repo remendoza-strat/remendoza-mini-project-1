@@ -2,20 +2,17 @@
 import Image from 'next/image';
 import TrueFocus from '../custom_effects/TrueFocus';
 import {Button} from '@/components/ui/button';
+import {inter} from './layout';
 import {IconDownload, IconBrandGithub, IconBrandLinkedin} from '@tabler/icons-react';
 
 export default function Index(){
 
     return(
-
         <div className="flex flex-col md:flex-row">
 
             <div className="flex-1 p-5 flex justify-center items-center">
-                
                 <div className="flex flex-col text-center animate-fade-right">
-
-                    <p className="text-8xl text-white font-bold">Hi, I am Rhabi</p>
-
+                    <p className={`${inter.className} text-8xl text-white font-bold`}>Hi, I am Rhabi</p>
                     <div className="my-5">
                         <a href="https://linkedin.com/in/rhabimendoza">
                             <Button className="bg-red-400 me-3 my-2 font-bold"><IconBrandLinkedin/>LinkedIn</Button>
@@ -27,34 +24,17 @@ export default function Index(){
                             <Button className="bg-red-400 me-3 my-2 font-bold"><IconBrandGithub/>Github</Button>
                         </a>   
                     </div>
-
-                    <div className="text-red-400">
-                        <TrueFocus 
-                            sentence="Developer Student Learner"
-                            manualMode={false}
-                            blurAmount={5}
-                            borderColor="red"
-                            animationDuration={0.5}
-                            pauseBetweenAnimations={1}
-                        />
+                    <div className={`${inter.className} text-red-400`}>
+                        <TrueFocus sentence="Developer Student Learner" manualMode={false} blurAmount={5} borderColor="red" animationDuration={0.5} pauseBetweenAnimations={1}/>
                     </div>
-
                 </div>
-
             </div>
 
             <div className="flex-1 p-5 flex justify-center">
-                <Image 
-                    src="/images/me.jpg" 
-                    alt="rhabi mendoza" 
-                    height={450}
-                    width={450}
-                    className="max-w-full h-auto rounded-full animate-fade-left"
-                />
+                <Image src="/images/me.jpg" alt="rhabi mendoza" height={450} width={450} className="max-w-full h-auto rounded-full animate-fade-left"/>
             </div>
 
         </div>
-    
     );
 
 }

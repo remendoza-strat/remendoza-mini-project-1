@@ -62,7 +62,7 @@ export default function LanguageSection(){
                     ))}
                 </div>
 
-                <div className="flex flex-wrap gap-2 p-2">
+                <div className="flex flex-wrap gap-2 p-2 justify-center">
                     { TabContent[activeTab as keyof typeof  TabContent].map(({name, icon}) => (
                         <Language key={name} name={name} icon={icon}/>
                     ))}
