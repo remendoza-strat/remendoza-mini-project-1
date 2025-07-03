@@ -14,7 +14,7 @@ export default function About(){
         <>
             <div className="mx-3">
                 <div className="my-5 m-2">
-                    <Title text="About"/>
+                    <Title text="Me"/>
                     <Me/>
                 </div>
                 <div className="my-10 m-2">
