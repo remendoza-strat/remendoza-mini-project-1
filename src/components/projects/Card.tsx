@@ -1,0 +1,30 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import {inter} from '@/src/app/layout';
+
+interface Card{
+	slug: string;
+	image: string;
+	title: string;
+	languages: string[];
+	description: string;
+}
+
+export default function Card({slug, image, title, languages, description} : Card){
+	return(
+		<>
+			<Link href={`/projects/${slug}`}>
+				<div className="projects-card-color w-80 h-96 mx-3 my-4 rounded-xl p-3 cursor-pointer hover:scale-[1.03] transition-transform duration-300">
+					<Image src={image} width={300} height={300} alt={title} className="w-full h-auto rounded-xl"/>
+					<h1 className={`text-white font-bold m-2 text-2xl ${inter.className}`}>{title}</h1>
+					<div className="m-2">
+						{languages.map((element, index) => (
+							<p key={index} className="bg-red-400 inline-block p-1 m-1 font-mono font-bold text-xs rounded text-white">{element}</p>
+						))}
+					</div>
+					<p className="text-white text-base m-1 ">{description}</p>
+				</div>
+			</Link>		
+		</>
+	);
+}

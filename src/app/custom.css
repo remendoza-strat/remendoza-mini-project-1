@@ -6,6 +6,10 @@ nav{
     background-color: rgba(18, 18, 18, 0.8);
 }
 
+.projects-card-color{
+    background-color: #1e1e1e;
+}
+
 @keyframes tilt{
     0%, 100% {transform: rotate(0deg);}
     20% {transform: rotate(-4deg);}
