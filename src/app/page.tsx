@@ -1,11 +1,14 @@
 'use client';
 import Image from 'next/image';
 import {IconDownload, IconBrandGithub, IconBrandLinkedin} from '@tabler/icons-react';
+import {useAOSInit} from '@/src/effects/AOS';
 import TrueFocus from '@/src/effects/TrueFocus';
 import {inter} from '@/src/app/layout';
 import {Button} from '@/components/ui/button';
 
 export default function Index(){
+
+    useAOSInit();
 
     return(
         <div className="flex flex-col md:flex-row">
@@ -31,7 +34,7 @@ export default function Index(){
             </div>
 
             <div className="flex-1 p-5 flex justify-center">
-                <Image src="/images/me.jpg" alt="rhabi mendoza" height={450} width={450} className="max-w-full h-auto rounded-full animate-fade-left"/>
+                <Image src="/images/me.jpg" alt="rhabi mendoza" height={450} width={450} className="max-w-full h-auto rounded-full animate-fade-left" priority/>
             </div>
 
         </div>

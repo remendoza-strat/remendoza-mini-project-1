@@ -5,7 +5,6 @@ interface Title{
 }
 
 export default function Title({text} : Title){
-    
     return(
         <>
             <div className="flex items-center m-3">
@@ -16,5 +15,4 @@ export default function Title({text} : Title){
             </div>
         </>
     );
-
 }

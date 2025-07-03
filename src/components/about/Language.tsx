@@ -1,12 +1,12 @@
 import {ReactNode} from 'react';
 import {inter} from '@/src/app/layout';
 
-interface LanguageProps{
+interface Language{
     name: string;
     icon: ReactNode;
 }
 
-export default function Language({name, icon} : LanguageProps){
+export default function Language({name, icon} : Language){
     
     return(
         <>

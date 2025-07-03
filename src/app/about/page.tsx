@@ -1,14 +1,10 @@
-'use client';
-import {useAOSInit} from '@/src/effects/AOS';
 import Title from '@/src/components/about/Title';
 import Me from '@/src/components/about/Me';
 import LanguageSection from '@/src/components/about/LanguageSection';
 import ItemSection from '@/src/components/about/ItemSection';
-import {certificates, progress} from '@/src/components/about/about-data';
+import {progress, certificates} from '@/src/components/about/about-item-data';
 
 export default function About(){
-    
-    useAOSInit();
 
     return(
         <>
