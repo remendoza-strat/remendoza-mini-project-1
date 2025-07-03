@@ -1,4 +1,4 @@
-import {inter} from '../../app/layout';
+import {inter} from '@/src/app/layout';
 
 interface Title{
     text: string;

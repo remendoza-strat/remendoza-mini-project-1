@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import {inter} from '../../app/layout';
+import {inter} from '@/src/app/layout';
 
 export default function Me(){
 

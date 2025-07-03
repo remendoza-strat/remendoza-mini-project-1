@@ -2,8 +2,8 @@
 import Link from 'next/link';
 import Image from 'next/image'; 
 import {useState} from 'react';
-import {jua} from '../app/layout';
 import {usePathname} from 'next/navigation';
+import {jua} from '@/src/app/layout';
 
 export default function Navbar(){
 

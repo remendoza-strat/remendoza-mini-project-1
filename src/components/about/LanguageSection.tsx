@@ -5,8 +5,8 @@ import {
   IconFileTypeXml, IconBrandFlutter, IconBrandMysql, IconBrandFirebase,
   IconBrandAdobePhotoshop, IconBrandFigma, IconAssembly, IconSquareFilled 
 } from '@tabler/icons-react';
-import {inter} from '../../app/layout';
-import Language from './Language';
+import {inter} from '@/src/app/layout';
+import Language from '@/src/components/about/Language';
 
 const  TabContent = {
     Web: [

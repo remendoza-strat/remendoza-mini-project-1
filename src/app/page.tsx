@@ -1,9 +1,9 @@
 'use client';
 import Image from 'next/image';
-import TrueFocus from '../custom_effects/TrueFocus';
-import {Button} from '@/components/ui/button';
-import {inter} from './layout';
 import {IconDownload, IconBrandGithub, IconBrandLinkedin} from '@tabler/icons-react';
+import TrueFocus from '@/src/effects/TrueFocus';
+import {inter} from '@/src/app/layout';
+import {Button} from '@/components/ui/button';
 
 export default function Index(){
 

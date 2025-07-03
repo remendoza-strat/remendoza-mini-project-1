@@ -1,6 +1,6 @@
 import {useState} from 'react';
-import {inter} from '../../app/layout';
-import Item from './Item';
+import {inter} from '@/src/app/layout';
+import Item from '@/src/components/about/Item';
 
 interface TabContent{
     image: string;

@@ -1,5 +1,5 @@
-import {inter} from '../../app/layout';
 import {ReactNode} from 'react';
+import {inter} from '@/src/app/layout';
 
 interface LanguageProps{
     name: string;

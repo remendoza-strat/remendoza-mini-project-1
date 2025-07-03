@@ -1,5 +1,5 @@
-import {inter} from '../../app/layout';
 import Image from 'next/image';
+import {inter} from '@/src/app/layout';
 
 interface ItemProps{
     image: string;
