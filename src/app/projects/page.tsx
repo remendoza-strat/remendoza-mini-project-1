@@ -2,7 +2,7 @@ import Title from '@/src/components/Title';
 import Card from '@/src/components/projects/Card';
 import {projects} from '@/src/components/projects/projects-card-data';
 
-export default function About(){
+export default function Projects(){
 	return(
 		<>
 			<Title text="My Works"/>

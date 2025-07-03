@@ -14,7 +14,7 @@ export default function Card({slug, image, title, languages, description} : Card
 	return(
 		<>
 			<Link href={`/projects/${slug}`}>
-				<div className="projects-card-color w-80 h-96 mx-3 my-4 rounded-xl p-3 cursor-pointer hover:scale-[1.03] transition-transform duration-300">
+				<div className="projects-card-color w-80 h-96 m-5 rounded-xl p-3 cursor-pointer hover:scale-[1.03] transition-transform duration-300" data-aos="zoom-in">
 					<Image src={image} width={300} height={300} alt={title} className="w-full h-auto rounded-xl"/>
 					<h1 className={`text-white font-bold m-2 text-2xl ${inter.className}`}>{title}</h1>
 					<div className="m-2">

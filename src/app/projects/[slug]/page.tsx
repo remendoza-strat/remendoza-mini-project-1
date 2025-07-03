@@ -1,20 +1,21 @@
-import { projects } from '@/src/components/projects/projects-page-data';
 import Page from '@/src/components/projects/Page';
+import {projects} from '@/src/components/projects/projects-page-data';
 
-interface ProjectPageWrapperProps {
-  params: Promise<{
-    slug: string;
-  }>;
+interface ProjectSlug{
+	params: Promise<{
+		slug: string;
+	}>;
 }
 
-export default async function ProjectPageWrapper({ params }: ProjectPageWrapperProps) {
-  const { slug } = await params;
+export default async function ProjectsSlug({params} : ProjectSlug){
+  
+	const {slug} = await params;
+	const project = projects.find((p) => p.slug === slug);
 
-  const project = projects.find((p) => p.slug === slug);
+	if(!project){
+		return <p className="text-white p-6 text-3xl font-bold">Project not found</p>;
+	}
 
-  if (!project) {
-    return <p className="text-white p-6">Project not found</p>;
-  }
+  	return <Page project={project}/>;
 
-  return <Page project={project} />;
 }

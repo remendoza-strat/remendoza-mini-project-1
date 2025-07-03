@@ -16,7 +16,7 @@ export default function Item({image, data1, data2, data3} : ItemProps){
               
                 <div className="w-full sm:w-1/2 flex justify-center">
                     <div className="w-24 h-24 relative rounded overflow-hidden">
-                        <Image src={image} alt={data1} fill className="object-cover" />
+                        <Image src={image} alt={data1} width={100} height={100} className="object-cover" />
                     </div>
                 </div>
 

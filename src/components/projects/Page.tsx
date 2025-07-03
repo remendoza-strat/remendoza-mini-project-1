@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import {inter} from '@/src/app/layout';
 
 export interface Page{
     slug: string;
@@ -15,48 +16,38 @@ interface ProjectPage{
 }
 
 export default function Page({project}: ProjectPage){
-    return(
+    return( 
+        <>
+            <div className="flex flex-col items-center" data-aos="zoom-in">
 
+                <h1 className={`text-white text-4xl font-bold m-3 ${inter.className}`}>{project.title}</h1>
 
-        
-        <div className="p-6 text-white">
-        <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
-        <Image
-            src={project.image}
-            alt={project.title}
-            width={600}
-            height={400}
-            className="rounded-xl mb-4"
-        />
-        <div className="mb-4">
-            {project.languages.map((lang, index) => (
-            <span
-                key={index}
-                className="bg-amber-400 text-black inline-block p-1 text-sm m-1 rounded"
-            >
-                {lang}
-            </span>
-            ))}
-        </div>
+                <div className="flex justify-center flex-col items-center m-3">
+                    <Image src={project.image} alt={project.title} width={600} height={600} className="rounded-xl border-white border-2 transition duration-300 ease-in-out hover:scale-110"/>
+                    
+                    <div className="m-3">
+                        {project.languages.map((element, index) => (
+                            <span key={index} className="bg-red-400 text-white font-bold inline-block p-1 text-sm m-1 font-mono rounded">{element}</span>
+                        ))}
+                    </div>
+                </div>
 
-        <p>About the Project</p>
-        <p className="text-lg mb-4">{project.description}</p>
-        
-        <p>Project Developers</p>
-        <ul>
-            {project.programmers.map((element, index) => (
-                <li key={index}>{element}</li>
-            ))}
-       
-        </ul>
-            
+                <div className="w-[80%] text-white">
+                    <h1 className={`text-xl font-bold mt-3 text-red-400 ${inter.className}`}>About the Project</h1>
+                    <p className="text-base text-justify">{project.description}</p>
+                    
+                    <h1 className={`text-xl font-bold mt-3 text-red-400 ${inter.className}`}>Project Developers</h1>
+                    <ul>
+                        {project.programmers.map((element, index) => (
+                            <li key={index} className="text-base">• {element}</li>
+                        ))}
+                    </ul>
+                
+                    <h1 className={`text-xl font-bold mt-3 text-red-400 ${inter.className}`}>Repository</h1>
+                    <a href={project.github} className="text-base text-blue-400 underline">View on GitHub</a>
+                </div>
 
-        <a
-            href={project.github}
-            className="text-blue-400 underline"
-        >
-            View on GitHub
-        </a>
-        </div>
+            </div>
+        </>
     );
 }
