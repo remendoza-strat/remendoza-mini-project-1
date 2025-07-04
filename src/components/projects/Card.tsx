@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {inter} from '@/src/app/layout';
+import {Inter} from 'next/font/google';
 
 interface Card{
 	slug: string;
@@ -11,6 +11,11 @@ interface Card{
 }
 
 export default function Card({slug, image, title, languages, description} : Card){
+
+	const inter = Inter({
+		subsets: ["latin"],
+	});
+
 	return(
 		<>
 			<Link href={`/projects/${slug}`}>

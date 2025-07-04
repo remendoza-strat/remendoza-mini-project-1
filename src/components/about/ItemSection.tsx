@@ -1,6 +1,6 @@
 'use client';
 import {useState} from 'react';
-import {inter} from '@/src/app/layout';
+import {Inter} from 'next/font/google';
 import Item from '@/src/components/about/Item';
 
 interface ItemData{
@@ -15,6 +15,10 @@ interface ItemSection{
 }
 
 export default function ItemSection({data} : ItemSection){
+
+	const inter = Inter({
+	  subsets: ["latin"],
+	});
 
   	const [activeTab, setActiveTab] = useState(Object.keys(data)[0]);
 

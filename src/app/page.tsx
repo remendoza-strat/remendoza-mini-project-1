@@ -3,10 +3,14 @@ import Image from 'next/image';
 import {IconDownload, IconBrandGithub, IconBrandLinkedin} from '@tabler/icons-react';
 import {useAOSInit} from '@/src/effects/AOS';
 import TrueFocus from '@/src/effects/TrueFocus';
-import {inter} from '@/src/app/layout';
+import {Inter} from 'next/font/google';
 import {Button} from '@/components/ui/button';
 
 export default function Index(){
+
+    const inter = Inter({
+      subsets: ["latin"],
+    });
 
     useAOSInit();
 

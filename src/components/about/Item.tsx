@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import {inter} from '@/src/app/layout';
+import {Inter} from 'next/font/google';
 
 interface Item{
     image: string;
@@ -9,6 +9,10 @@ interface Item{
 }
 
 export default function Item({image, data1, data2, data3} : Item){
+
+    const inter = Inter({
+        subsets: ["latin"],
+    });
     
     return(
         <>

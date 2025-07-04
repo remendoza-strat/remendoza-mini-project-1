@@ -1,5 +1,5 @@
 import {ReactNode} from 'react';
-import {inter} from '@/src/app/layout';
+import {Inter} from 'next/font/google';
 
 interface Language{
     name: string;
@@ -7,6 +7,10 @@ interface Language{
 }
 
 export default function Language({name, icon} : Language){
+
+    const inter = Inter({
+      subsets: ["latin"],
+    });
     
     return(
         <>

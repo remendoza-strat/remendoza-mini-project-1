@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import {inter} from '@/src/app/layout';
+import {Inter} from 'next/font/google';
 
 export interface Page{
     slug: string;
@@ -16,6 +16,11 @@ interface ProjectPage{
 }
 
 export default function Page({project}: ProjectPage){
+
+    const inter = Inter({
+        subsets: ["latin"],
+    });
+
     return( 
         <>
             <div className="flex flex-col items-center" data-aos="zoom-in">

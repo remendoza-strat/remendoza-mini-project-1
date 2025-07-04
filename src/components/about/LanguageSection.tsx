@@ -1,10 +1,14 @@
 'use client';
 import {useState} from 'react';
-import {inter} from '@/src/app/layout';
+import {Inter} from 'next/font/google';
 import Language from '@/src/components/about/Language';
 import {tabs} from '@/src/components/about/about-language-data'
 
 export default function LanguageSection(){
+
+    const inter = Inter({
+      subsets: ["latin"],
+    });
 
     const [activeTab, setActiveTab] = useState("Web");
 
