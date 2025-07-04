@@ -6,11 +6,11 @@ interface Language{
     icon: ReactNode;
 }
 
-export default function Language({name, icon} : Language){
+const inter = Inter({
+    subsets: ["latin"],
+});
 
-    const inter = Inter({
-      subsets: ["latin"],
-    });
+export default function Language({name, icon} : Language){
     
     return(
         <>

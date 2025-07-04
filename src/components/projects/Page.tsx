@@ -15,11 +15,11 @@ interface ProjectPage{
     project: Page;
 }
 
-export default function Page({project}: ProjectPage){
+const inter = Inter({
+    subsets: ["latin"],
+});
 
-    const inter = Inter({
-        subsets: ["latin"],
-    });
+export default function Page({project}: ProjectPage){
 
     return( 
         <>

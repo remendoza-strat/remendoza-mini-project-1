@@ -10,11 +10,11 @@ interface Card{
 	description: string;
 }
 
-export default function Card({slug, image, title, languages, description} : Card){
+const inter = Inter({
+	subsets: ["latin"],
+});
 
-	const inter = Inter({
-		subsets: ["latin"],
-	});
+export default function Card({slug, image, title, languages, description} : Card){
 
 	return(
 		<>

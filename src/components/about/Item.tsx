@@ -8,11 +8,11 @@ interface Item{
     data3: string;
 }
 
-export default function Item({image, data1, data2, data3} : Item){
+const inter = Inter({
+    subsets: ["latin"],
+});
 
-    const inter = Inter({
-        subsets: ["latin"],
-    });
+export default function Item({image, data1, data2, data3} : Item){
     
     return(
         <>

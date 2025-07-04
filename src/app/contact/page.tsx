@@ -5,11 +5,11 @@ import {useForm} from '@formspree/react';
 import Title from "@/src/components/Title";
 import {Button} from '@/components/ui/button';
 
-export default function About(){
+const inter = Inter({
+    subsets: ["latin"],
+});
 
-    const inter = Inter({
-      subsets: ["latin"],
-    });
+export default function About(){
 
     const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_ID as string);
 

@@ -5,12 +5,12 @@ import {useState} from 'react';
 import {usePathname} from 'next/navigation';
 import {Jua} from 'next/font/google';
 
-export default function Navbar(){
+const jua = Jua({
+    subsets: ["latin"],
+    weight: "400",
+});
 
-    const jua = Jua({
-      subsets: ["latin"],
-      weight: "400",
-    });
+export default function Navbar(){
 
     const [menuOpen,setMenuOpen] = useState(false);
     const pathName= usePathname();

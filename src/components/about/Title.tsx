@@ -4,11 +4,11 @@ interface Title{
     text: string;
 }
 
-export default function Title({text} : Title){
+const inter = Inter({
+    subsets: ["latin"],
+});
 
-    const inter = Inter({
-      subsets: ["latin"],
-    });
+export default function Title({text} : Title){
 
     return(
         <>

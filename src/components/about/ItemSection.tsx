@@ -14,11 +14,11 @@ interface ItemSection{
     data: Record<string, ItemData[]>;
 }
 
-export default function ItemSection({data} : ItemSection){
+const inter = Inter({
+	subsets: ["latin"],
+});
 
-	const inter = Inter({
-	  subsets: ["latin"],
-	});
+export default function ItemSection({data} : ItemSection){
 
   	const [activeTab, setActiveTab] = useState(Object.keys(data)[0]);
 

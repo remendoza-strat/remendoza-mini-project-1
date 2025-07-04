@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import {Inter} from 'next/font/google';
 
-export default function Me(){
+const inter = Inter({
+    subsets: ["latin"],
+});
 
-    const inter = Inter({
-      subsets: ["latin"],
-    });
+export default function Me(){
 
     return(
         <>

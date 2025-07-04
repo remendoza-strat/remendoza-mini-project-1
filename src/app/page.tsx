@@ -6,11 +6,11 @@ import TrueFocus from '@/src/effects/TrueFocus';
 import {Inter} from 'next/font/google';
 import {Button} from '@/components/ui/button';
 
-export default function Index(){
+const inter = Inter({
+    subsets: ["latin"],
+});
 
-    const inter = Inter({
-      subsets: ["latin"],
-    });
+export default function Index(){
 
     useAOSInit();
 
