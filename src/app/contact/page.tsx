@@ -7,7 +7,7 @@ import {Button} from '@/components/ui/button';
 
 export default function About(){
 
-    const [state, handleSubmit] = useForm("xqabjlpd");
+    const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_ID as string);
 
     const emailRef = useRef<HTMLInputElement>(null);
     const messageRef = useRef<HTMLTextAreaElement>(null);
@@ -43,11 +43,12 @@ export default function About(){
                             />
                         </div>
 
-                        {state.succeeded && (<p className="text-red-400 text-center font-bold text-xl">Thanks for reaching out!</p>)}
+                        {state.succeeded && (<p className={`text-red-400 text-center font-bold text-xl ${inter.className}`}>Thanks for reaching out!</p>)}
 
                         <Button disabled={state.submitting} className="cursor-pointer p-5 text-sm text-center font-bold text-white rounded-lg bg-red-400">Send Message</Button>
                     </form>
                 </div>
+                
             </div>
         </>
     );

@@ -17,15 +17,25 @@ export const jua = Jua({
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>){
     return(
         <html lang="en">
+
             <body>
+
+                <head>
+                    <link rel="icon" href="/images/icon.png"/>
+                </head>
+
                 <Navbar/>
+
                 <div className="pt-25">
-                    <ClickSpark sparkColor="#fff" sparkSize={10} sparkRadius={15} sparkCount={8} duration={400}>
+                    <ClickSpark sparkColor="#fff" sparkSize={10} sparkRadius={15} sparkCount={8} duration={500}>
                         {children}
                     </ClickSpark>
                 </div>
+
                 <Footer/>
+                
             </body>
+
         </html>
     );
 }
