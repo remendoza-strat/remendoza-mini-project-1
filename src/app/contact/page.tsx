@@ -23,7 +23,7 @@ export default function About(){
 
     return(
         <>
-            <div className="animate-fade-up">
+            <div>
                 <Title text="Get in Touch"/>
 
                 <div className="py-8 px-4 mx-auto max-w-screen-md">
