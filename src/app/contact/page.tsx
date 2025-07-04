@@ -1,6 +1,6 @@
 'use client';
 import {Inter} from 'next/font/google';
-import {useEffect, useRef} from 'react';
+import {useEffect} from 'react';
 import {useForm} from '@formspree/react';
 import Title from "@/src/components/Title";
 import {Button} from '@/components/ui/button';
@@ -13,13 +13,12 @@ export default function About(){
 
     const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_ID as string);
 
-    const emailRef = useRef<HTMLInputElement>(null);
-    const messageRef = useRef<HTMLTextAreaElement>(null);
-
     useEffect(() => {
-    if(state.succeeded){
-        if(emailRef.current) emailRef.current.value = '';
-        if(messageRef.current) messageRef.current.value = '';
+        if(state.succeeded){
+        const timer = setTimeout(() => {
+            window.location.reload();
+        }, 2000);
+        return () => clearTimeout(timer);
     }}, [state.succeeded]);
 
     return(
@@ -32,7 +31,7 @@ export default function About(){
                         <div>
                             <label htmlFor="email" className={`block mb-2 text-xl text-white font-bold border-b-4 border-red-400 ${inter.className}`}>Your Email</label>
                             <input 
-                            id="email" type="email" name="email" required ref={emailRef}
+                            id="email" type="email" name="email" required
                             className="bg-white border text-base rounded-lg w-full p-3"
                             placeholder="email@address.com"
                             />
@@ -41,7 +40,7 @@ export default function About(){
                         <div>
                             <label htmlFor="message" className={`block mb-2 text-xl text-white font-bold border-b-4 border-red-400 ${inter.className}`}>Your Message</label>
                             <textarea
-                            id="message" name="message" required rows={5} ref={messageRef}
+                            id="message" name="message" required rows={5}
                             className="bg-white border text-base rounded-lg w-full p-3"
                             placeholder="Leave a message..."
                             />
