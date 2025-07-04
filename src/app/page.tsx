@@ -18,7 +18,7 @@ export default function Index(){
         <>
             <div className="flex flex-col sm:flex-row h-[calc(100vh-12rem)]">
 
-                <div className="flex-1 flex items-center justify-center m-3">
+                <div className="flex-1 flex items-center justify-center m-3 animate-fade-right">
                     
                     <div className="text-center">
                         <p className={`${inter.className} text-8xl text-white font-bold`}>Hi, I am Rhabi</p>
