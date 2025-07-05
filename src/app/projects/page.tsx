@@ -9,12 +9,9 @@ export default function Projects(){
 			<div className="flex flex-wrap justify-center">
 				{projects.map((p) => (
 					<Card
-					key={p.slug}
-					slug={p.slug}
-					image={p.image}
-					title={p.title}
-					languages={p.languages}
-					description={p.description}
+						key={p.slug} slug={p.slug}
+						image={p.image} title={p.title}
+						languages={p.languages} description={p.description}
 					/>
 				))}
 			</div>

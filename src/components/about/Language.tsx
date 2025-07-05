@@ -1,17 +1,16 @@
 import {ReactNode} from 'react';
 import {Inter} from 'next/font/google';
 
-interface Language{
+interface LanguageData{
     name: string;
     icon: ReactNode;
 }
 
 const inter = Inter({
-    subsets: ["latin"],
+    subsets: ["latin"]
 });
 
-export default function Language({name, icon} : Language){
-    
+export default function Language({name, icon} : LanguageData){
     return(
         <>
             <div className="flex items-center border-2 border-red-400 rounded m-3 py-3 px-5 about-item-effect" data-aos="zoom-in">
@@ -20,5 +19,4 @@ export default function Language({name, icon} : Language){
             </div>
         </>
     );
-
 }

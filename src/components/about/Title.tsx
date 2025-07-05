@@ -1,15 +1,14 @@
 import {Inter} from 'next/font/google';
 
-interface Title{
+interface TitleTitle{
     text: string;
 }
 
 const inter = Inter({
-    subsets: ["latin"],
+    subsets: ["latin"]
 });
 
-export default function Title({text} : Title){
-
+export default function Title({text} : TitleTitle){
     return(
         <>
             <div className="flex items-center m-3">
